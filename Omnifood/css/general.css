@@ -1,1 +1,238 @@
+/* 
+--- 01 TYPOGRAPHY SYSTEM
+
+   SPACING SYSTEM (px)
+   2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+   FONT SIZE SYSTEM (px)
+   10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+   - FINT WEIGHT:
+     default: 400
+     Medium:500
+     Semi-bold:500
+     Bold:700
+
+   - LINE HEIGHT:
+     Default: 1
+     small:1.05
+     paragraph:1.6
+
+
+   ---02 COLORS
+   primary:Brand color: #e67e22
+
+  - TINTS:#fae5d3
+  - SHADES:
+  - ACCENTS:#cf711f
+  - GREY:#555
+
+  ----05 Shadows
+
+
+  ----06 Border-Radius
+         default:9rem 
+
+  ----07 whiteSpace
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  line-height: 1;
+  color: #333;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+}
+/******************************************/
+/*  General Reusable  components */
+/******************************************/
+
+/* .section-how div {
+  padding: 100px;
+  font-size: 50px;
+} */
+.grid {
+  display: grid;
+  row-gap: 9.6rem;
+  column-gap: 4.2rem;
+
+  margin-bottom: 9.6rem;
+}
+.container {
+  /* 1140px */
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+.grid--2--cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
+.grid--center-v {
+  align-items: center;
+}
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #000;
+}
+.heading-primary {
+  font-size: 5.2rem;
+  line-height: 1.05;
+  margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+
+  margin-bottom: 9.6rem;
+}
+
+.heading-tertiary {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+.subheading {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #cf711f;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.75px;
+}
+
+.btn--first:link,
+.btn--first:visited {
+  display: inline-block;
+  background-color: #e67e22;
+  color: #fff;
+  font-size: 2rem;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9rem;
+  text-decoration: none;
+  font-weight: 500;
+  /*  Put transition on original "state" */
+  transition: ackground-color 1s;
+  margin-right: 1.8rem;
+}
+
+.btn--first:hover,
+.btn--first:active {
+  background-color: #cf711f;
+
+  box-shadow: inset 0 0 0 3px #fff;
+}
+.btn--last:link,
+.btn--last:visited {
+  background-color: rgba(0, 0, 0, 0.918);
+  color: #fff;
+  font-size: 2rem;
+  padding: 1.6rem 3.2rem;
+  border-radius: 15rem;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+}
+.btn {
+  background-color: rgba(0, 0, 0, 0.904);
+  color: #fff;
+  font-size: 2rem;
+  padding: 1.2rem;
+  border-radius: 9px;
+  text-decoration: none;
+  font-weight: 500;
+  align-self: end;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  font-weight: 500;
+}
+.btn--last:hover,
+.btn--last:active {
+  background-color: rgba(228, 222, 222, 0.945);
+  color: #000;
+  font-weight: 700;
+
+  transition: ackground-color 1s;
+  box-shadow: inset 0 0 0 3px #fff;
+}
+.link:link,
+.link:visited {
+  display: inline-block;
+  color: #e67e22;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1px solid currentColor;
+  transition: all 0.3s;
+}
+
+.link:hover,
+.link:active {
+  color: #cf711f;
+  border-bottom: none;
+  border-bottom: 1px solid transparent;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.list-item {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  line-height: 1.2;
+}
+.list-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #e67e22;
+}
+/* Helper */
+/* strong {
+  font-weight: 500;
+} */
+.center-text {
+  text-align: center;
+}
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
+}
+.cta *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
+}
 
